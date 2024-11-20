@@ -1,0 +1,177 @@
+/* Font: Overpass, with weights: 400 and 700 */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    /* Primary */
+    --orange: hsl(25, 97%, 53%);
+    
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100svh;
+    overflow: hidden;
+    font-family: "Overpass", sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.ratings button {
+    width: 50px;
+    height: 50px;
+    
+    border: none;
+    border-radius: 50px;
+
+    background-color: hsla(217, 12%, 63%, 10%);
+    color: var(--light-grey);
+}
+
+.ratings button:hover {
+    background-color: var(--orange);
+    color: var(--very-dark-blue);   
+}
+
+.ratings button:focus {
+    background-color: var(--white);
+    color: var(--very-dark-blue);   
+}
+
+.card, .thank-you-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 350px;
+    height: 350px;
+    padding: 35px;
+
+    background-image: linear-gradient(hsla(213, 19%, 18%, 600%), hsla(213, 19%, 18%, 25%));
+    color: var(--white);
+
+    border-radius: 1rem;
+}
+
+.thank-you-card {
+    align-items: center;
+    text-align: center;
+}
+
+.star {
+    width: 20px;
+    padding: 15px;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    background-color: hsla(217, 12%, 63%, 12%);
+}
+
+.question, .directions {
+    margin-top: 0;
+}
+
+.directions, .appreciation {
+    color: hsla(217, 12%, 63%, 70%);
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-bottom: 0;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit {
+    width: 100%;
+    padding: 15px 0px;
+
+    background-color: var(--orange);
+    color: var(--very-dark-blue);    
+    border: none;
+    border-radius: 20px;
+
+    text-transform: uppercase;
+}
+
+.submit:hover {
+    background-color: var(--white);
+}
+
+.user-input {
+    background-color: hsla(217, 12%, 63%, 20%);
+    color: var(--orange);
+    font-weight: 500;
+
+    padding: 0px 25px;
+    margin-top: 2rem;
+    border-radius: 40px;
+}
+
+.thank-you {
+    margin-bottom: 0;
+}
+
+.attribution {
+    margin-top: 3rem;
+    color: var(--light-grey);
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (width < 376px){
+    .card, .thank-you-card {
+        width: 16rem;
+        height: 18rem;
+        padding: 1.75rem;
+    }
+
+    .ratings button {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .question {
+        margin-bottom: 0.75rem;
+    }
+
+    .directions, .appreciation {
+        font-size: 0.8rem;
+    }
+
+    .star {
+        /* width: 1rem; */
+        padding: 0.75rem;
+    }
+
+    .user-input, .thank-you, .appreciation {
+        margin-top: 1rem;
+    }
+
+    .thanks-img {
+        width: 7rem;
+    }
+}
